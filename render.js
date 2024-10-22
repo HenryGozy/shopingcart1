@@ -92,7 +92,7 @@ function displayItem(element) {
     <br>
 <input type="number" max="10" min="1" value ='1' data-id="${elementItem.id}" class='quantity'>
 <button class="addCont" onclick='addTo("${elementItem.id}")'>
-<i class="fa-solid fa-basket-shopping" ></i> add to cart
+<i class="fa-solid fa-basket-shopping" ></i>
  </button>
         <h3 class='pdel'>Product Detail</h3>
         <p class='pdes'>${elementItem.description}</p>
