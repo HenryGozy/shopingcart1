@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-cormmerce</title>
+    <link rel="stylesheet" href="./render.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <section id="nav-bar">
+        <nav>
+            <a class="navlogo" href="">
+                <h2>Shopping Point .... <i class="fa-solid fa-bag-shopping"></i></h2>
+            </a>
+            <ul>
+                <li>Home</li>
+                <li>Shop</li>
+                <li>About</li>
+                <li>Contant</li>
+                <li>Service</li>
+                <li onclick="popOutCart()" id="CartLogo"><i class="fa-solid fa-bag-shopping"></i><span
+                        id="displayQuanity"></span></li>
+            </ul>
+        </nav>
+    </section>
+    <main>
+        <section id="sideBar">
+            <div id="categories">
+                <ul>
+                    <li id="selALL"><i class="fa-solid fa-border-all"></i> All</li>
+                    <li id="selBag">Bag</li>
+                    <li id="selShort">Short</li>
+                    <li id="selShoe">Shoes </li>
+                    <li id="selShirt">Shirt</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section id="displayContainer">
+            <div id="display">
+
+            </div>
+        </section>
+    </main>
+    <div id="backdrop">
+
+    </div>
+
+    <section id="popOute">
+        <select name="" id="select">
+            <option value="select size">select size</option>
+            <option value="select size">select size</option>
+            <option value="select size">select size</option>
+        </select>
+    </section>
+
+    <section id="cart">
+        <div id="cancel" onclick="cancelcart()"><i class="fa-solid fa-xmark"></i></div>
+        <div>
+            <div id="form-nav">
+
+            </div>
+        </div>
+        </div>
+        `
+    </section>
+
+
+
+
+
+</body>
+<script type="module" src="./render.js">
+
+
+</script>
+
+</html>

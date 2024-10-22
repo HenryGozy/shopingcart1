@@ -1,0 +1,455 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Roboto;
+    outline: none;
+}
+
+body {
+    padding-top: 80px;
+    background-color: rgba(255, 255, 255, 0);
+    overflow: visible;
+}
+
+#nav-bar {
+    background-color: rgb(253, 253, 253);
+    width: 100%;
+    position: fixed;
+    z-index: 997;
+    top: 0;
+    left: 0;
+    color: rgb(0, 0, 0);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.678);
+}
+
+#nav-bar nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: max-content;
+    padding: 0px 7%;
+    height: 69px;
+}
+
+#nav-bar nav ul li {
+    list-style: none;
+    display: inline;
+    padding: 5px 10px;
+}
+
+.navlogo {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: cursive;
+    font-size: 20px;
+}
+
+.navlogo h2 {
+    text-shadow: 0 0 1px rebeccapurple;
+
+}
+
+.navlogo img {
+    width: 200px;
+    height: 65px;
+    object-fit: cover;
+}
+#CartLogo{
+    position:relative;
+    font-weight: 500;
+}
+#displayQuanity{
+    border:solid 1px;
+    width: 20px;
+    height:20px;
+    border-radius: 50%;
+    position:absolute;
+    right:-10px;
+    bottom:0;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+
+}
+
+body main {
+    position: relative;
+    padding: 20px 0px;
+}
+
+#displayContainer {
+    margin-left: 14%;
+    height: 100%;
+    border: solid rgba(255, 0, 0, 0);
+    padding: 10px;
+}
+
+#display {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    border: rgba(255, 0, 0, 0) solid;
+    column-gap: 30px;
+    row-gap: 60px;
+}
+
+
+.eleClass {
+    background-color: rgba(225, 223, 225, 0);
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.009) inset;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+    text-align: center;
+}
+#data{
+    text-align: left;
+}
+
+.eleClass:hover {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.281);
+}
+
+.name {
+    font-weight: 500;
+    font-size: 20px;
+    margin: 10px 0px;
+}
+
+.price {
+    font-size:20px;
+    margin: 5px 0px;
+    font-weight:500;
+    font-size: 18px;
+    letter-spacing:2px;
+}
+
+.star {
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+
+.image {
+    width: 195px;
+    height: 195px;
+    object-fit: cover;
+    margin: 0px auto;
+    border-radius: 20px;
+}
+
+.fa-star {
+    color: gold;
+    margin-top: 10px;
+}
+
+.quantity {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 10px;
+    background-color: rgba(128, 128, 128, 0.315);
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+
+}
+
+.addCont {
+    width:50px;
+    height:30px;
+  background-color:lightgray;
+   border: none;
+    display: grid;
+    font-size: 15px;
+    place-items: center;
+    border-radius: 3px;
+    aspect-ratio: 1/1;
+    position: absolute;
+    right: 30px;
+    bottom: 10px;
+   
+}
+
+#sideBar {
+    top: 60px;
+    left: 0;
+    position: fixed;
+    height: 100vh;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.34);
+
+}
+
+#categories {
+    width: 100%;
+    height: max-content;
+    padding-top: 50px;
+}
+
+#categories ul li {
+    list-style: none;
+    padding: 15px 0px;
+    padding-left: 30px;
+    font-weight: 500;
+    letter-spacing: 2px;
+
+}
+
+#categories ul li:hover {
+    background-color: rgba(37, 37, 37, 0.105);
+    cursor: pointer;
+}
+
+#backdrop {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.842);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 998;
+}
+
+
+#popOute {
+    padding: 20px;
+    display: none;
+    column-gap: 20px;
+    width: 70%;
+    height: 90%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.418);
+
+}
+
+#cancel {
+    width: 35px;
+    height: 35px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(18, 17, 17);
+    position: absolute;
+    right: -5px;
+    top: -10px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.374);
+    cursor: pointer;
+}
+
+#popOutGrid {
+    border: solid rgba(0, 128, 0, 0);
+    width: 90%;
+}
+
+.ptype {
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+#popOutGrid img {
+    opacity: 1;
+    filter: drop-shadow(0 0 0);
+}
+
+.pname {
+    margin: 30px 0px 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.pprice {
+    font-size: 17px;
+    color: rgb(0, 0, 0);
+    margin: 10px 0px;
+    font-weight: 600;
+    font-size: 35px;
+    letter-spacing: 1px;
+}
+
+#select {
+    margin: 10px 0px;
+    width: 130px;
+    height: 30px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    border: solid 0.5px;
+
+}
+
+.pdel {
+    margin: 20px 0px 10px;
+}
+
+.pdes {
+    margin-bottom: 20px;
+}
+
+#popOutList {
+    width: 110%;
+    height: 100%;
+}
+
+.grid1 {
+    background-color: rgba(16, 16, 16, 0);
+    margin-bottom: 10px;
+    height: 400px;
+}
+
+.img-wrap {
+    display: flex;
+}
+
+.grid2 {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    margin: 10px;
+
+}
+
+.grid3 {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    margin: 10px;
+
+}
+
+#cart {
+    display: none;
+    width:550px;
+    height:100%;
+    background-color: white;
+    position: fixed;
+    top:0;
+    right:0;
+    z-index: 999;
+    padding:0px 0px 20px;
+    overflow-x: hidden;
+
+}
+
+#form-nav {
+    width:100%;
+    height: max-content;
+    margin: 0px auto;
+    border:solid rgba(255, 0, 0, 0);
+}
+
+.AOTIC{
+    padding: 30px;
+    background-color: rgba(192, 192, 192, 0.267);
+    margin-bottom: 30px;
+}
+
+
+
+
+
+#form-nav .ULnew {
+display:grid;
+grid-template-columns:1fr 1fr 1fr ;
+margin-bottom: 30px;    
+}
+
+#form-nav .ULnew li {
+    list-style: none;
+    padding: 3px;
+
+   
+}
+
+#form-nav .ULnew img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+
+}
+#form-nav .ULnew .priceTOtal{
+    cursor: pointer;
+}
+#form-nav .ULnew .priceTOtal span{
+    font-size:10px;
+    color: grey;
+}
+#form-nav .ULnew .priceTOtal li{
+    font-size:13px;
+}
+#form-nav .ULnew  .nameSelect{
+    border: solid rgba(255, 166, 0, 0);
+}
+#form-nav .ULnew .PNIC{
+    font-size:12px;
+    font-weight: bold;
+    border:solid rgba(0, 128, 0, 0);
+    height: max-content;
+    padding: 0;
+    width: 180px;
+}
+#form-nav .ULnew .QINC{
+    font-size:12px;
+    font-weight: 300;
+    background-color:rgba(128, 128, 128, 0.434);
+    border:none;
+    padding:3px;
+    border-radius:2px;
+}
+.checckClass{
+    color: rgb(43, 42, 42);
+    display: grid;place-items:center;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.checckClass h1{
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(43, 42, 42);
+}
+.checckClass span i{
+    font-size: 50px;
+    margin-top: 30px;
+
+}
+#popOutAllert{
+    width:max-content;
+    background-color: rgb(15, 15, 15);
+    color:rgb(9, 206, 9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.427);
+    border:solid rgb(9, 206, 9) 1px;
+    position: fixed;
+    bottom:10%;
+    z-index:999;
+    left:50%;
+    transform:translateX(-50%);
+    height: 60px;
+    display: grid;
+    place-items: center;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+#popOutAllert ul li {
+    list-style:none;
+
+}
